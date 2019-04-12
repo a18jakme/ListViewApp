@@ -30,13 +30,12 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ArrayAdapter(getApplicationContext(),R.layout.list_item_textview,
                 R.id.my_item_textview,listData);
         myListView = (ListView)findViewById(R.id.my_listview);
-        adapter.add("Hilding");
         myListView.setAdapter(adapter);
 
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"Height: " + mountainHeights[position],Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Location: " + mountainLocations[position] + "\n Height: " + mountainHeights[position],Toast.LENGTH_SHORT).show();
             }
         });
 
